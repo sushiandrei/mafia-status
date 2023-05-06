@@ -10,8 +10,11 @@
     <form id="add-player-form">
       <label for="player-name">Player Name:</label>
       <input type="text" id="player-name" name="player-name">
+      <label for="player-role">Player Role:</label>
+      <input type="text" id="player-role" name="player-role">
       <button type="submit">Add Player</button>
     </form>
+    <button id="show-roles-button">Show Roles</button>
     <table id="player-table">
       <thead>
         <tr>
@@ -19,13 +22,24 @@
           <th>Status</th>
         </tr>
       </thead>
-      <tbody>
-        <tr>
-          <td>Player 1</td>
-          <td><button class="status-button" onclick="toggleStatus(this)">Alive</button></td>
-        </tr>
-      </tbody>
+      <tbody></tbody>
     </table>
+
+    <div id="role-modal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Player Roles</h2>
+        <table id="role-table">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Role</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </div>
 
     <script src="script.js"></script>
   </body>
